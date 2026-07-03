@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;   
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, lightblue, blue);
+    gap: 20px;               
+    margin: 0;
+}
+
+.calculator {
+    background-color: hsl(240, 41%, 72%);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 340px;
+}
+
+.display {
+    width: 100%;
+    height: 80px;
+    background-color: lightblue;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: right;
+    padding: 15px;
+    font-weight: 300;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    padding: 20px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #ffffff;
+    background-color: #24243e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #2f2f54;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.operator {
+    background-color: darkblue;
+    color: white;
+}
+
+.operator:hover {
+    background-color: #ffb03a;
+}
+
+
+.clear {
+    background-color: hsl(202, 97%, 61%);
+    color: white;
+}
+
+.clear:hover {
+    background-color: hsl(202, 97%, 61%);
+}
+
+.equal {
+    grid-column: span 2;
+    background-color: #34c759;
+    color: #ffffff;
+}
+
+.equal:hover {
+    background-color: #4cd964;
+}
+
+div h1 {
+    color: #ffffff;             
+    background-color: hsl(240, 41%, 72%);
+    
+    padding: 20px;              
+    width: fit-content;         
+    border-radius: 4px;         
+  }
+
+  @media screen and (max-width: 1024px) {
+    .container {
+      width: 90%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav-menu {
+      display: none;
+    }
+    .sidebar, .main-content {
+      width: 100%;
+      float: none;
+    }
+    .flex-container {
+      flex-direction: column;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
